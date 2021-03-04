@@ -19,9 +19,9 @@ var dmv_route = [
 ];
 
 mp.events.add('createDMVCheckpoint', (c) => {
-  dmvcheckpoint = mp.checkpoints.new(c == dmv_route.length - 1 ? 4 : 1, new mp.Vector3(dmv_route[c][0], dmv_route[c][1], dmv_route[c][2]), 5,
+  dmvcheckpoint = mp.checkpoints.new(c === dmv_route.length - 1 ? 4 : 1, new mp.Vector3(dmv_route[c][0], dmv_route[c][1], dmv_route[c][2]), 5,
     {
-      direction: c != dmv_route.length - 1 ? new mp.Vector3(dmv_route[c + 1][0], dmv_route[c + 1][1], dmv_route[c + 1][2]) : null,
+      direction: c !== dmv_route.length - 1 ? new mp.Vector3(dmv_route[c + 1][0], dmv_route[c + 1][1], dmv_route[c + 1][2]) : null,
       color: [206, 47, 47, 255],
       visible: true,
       dimension: 0
@@ -53,7 +53,7 @@ mp.events.add('destroyDMVblip', () => {
 });
 
 mp.events.add("playerEnterCheckpoint", (checkpoint) => {
-  if (checkpoint == dmvcheckpoint) {
+  if (checkpoint === dmvcheckpoint) {
     mp.events.callRemote("onPlayerEnterDMV");
   }
 });
