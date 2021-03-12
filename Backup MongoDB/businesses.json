@@ -249,7 +249,7 @@
 		}
 	],
 	"haveBuyPoint" : true,
-	"haveEntrance" : true,
+	"haveEntrance" : false,
 	"haveExtra" : true,
 	"haveRobPoint" : true,
 	"index" : NumberInt(7),
