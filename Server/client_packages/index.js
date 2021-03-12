@@ -1,28 +1,28 @@
 // // Globals
-global.cefDomain = 'http://25.89.25.114:8080/#';
+global.cefDomain = 'http://2.57.186.7/#';
 global.player = mp.players.local;
-global.interfaceOpened = false;
-global.loggedIn = false;
+global.interfaceOpened = true;
+global.loggedIn = true;
 global.camera = null;
 global.hud = null;
 global.browser = null;
 global.Show_Names = true;
-global.showMoney = false;
+global.showMoney = true;
 global.showSubtitles = true;
-global.DeathScreen = false;
-global.useInventory = false;
+global.DeathScreen = true;
+global.useInventory = true;
 
-// require("./fly.js");
+require("./fly.js");
 
 // Core
-require("./client/core"); 
+require("./client/core");
 
 // Systems
-require("./client/systems/custom.js"); 
-require("./client/systems/dmv.js"); 
-require("./client/systems/gps.js"); 
-require("./client/systems/bizz.js"); 
-require("./client/systems/clothes.js"); 
+require("./client/systems/custom.js");
+require("./client/systems/dmv.js");
+require("./client/systems/gps.js");
+require("./client/systems/bizz.js");
+require("./client/systems/clothes.js");
 require("./client/systems/youtube.js");
 require("./client/systems/inventory.js");
 require("./client/systems/barber.js");

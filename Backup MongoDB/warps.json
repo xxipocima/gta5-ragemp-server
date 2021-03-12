@@ -1,4 +1,4 @@
-{
+[{
 	"__v" : NumberInt(0),
 	"_id" : ObjectId("5c793a4206aba24e48e93441"),
 	"position" : {
@@ -127,4 +127,4 @@
 		"z" : 30.709854125976562
 	},
 	"title" : "police"
-},
+}]

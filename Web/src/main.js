@@ -10,7 +10,7 @@ Vue.use(VTooltip);
 
 global.gui = { chat: null, hud: null, notify: null, modals: [] }
 
-const app = new Vue({
+var app = new Vue({
   router,
   store,
   render: h => h(App)

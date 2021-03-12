@@ -4,7 +4,7 @@
 	"gamemode" : "roleplay", 
 	"stream-distance" : 300.0,
 	"announce" : false,
-	"port": 22005,
+	"port": 22008,
 	"voice-chat" : true,
 	"allow-cef-debugging": true
 }

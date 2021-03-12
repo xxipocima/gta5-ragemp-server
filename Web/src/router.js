@@ -7,7 +7,8 @@ import Auth from './views/Auth.vue';
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+    mode: 'history',
+    routes: [
     { path: '/', name: 'Home', component: Home },
     { path: '/auth', name: 'Auth', component: Auth },
     { path: '/hud', name: 'gui', component: Hud } 

@@ -1,4 +1,4 @@
-{
+[{
 	"__v" : NumberInt(0),
 	"_id" : ObjectId("5c7595451ad7201da02a95a1"),
 	"entrance" : {
@@ -115,4 +115,4 @@
 	"rentPrice" : NumberInt(0),
 	"safe" : NumberInt(0),
 	"upgradeLevel" : NumberInt(1)
-},
+}]

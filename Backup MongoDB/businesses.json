@@ -1,4 +1,4 @@
-{
+[{
 	"_id" : ObjectId("5c75af1de100f2516a9071af"),
 	"blipColor" : NumberInt(4),
 	"blipIcon" : NumberInt(72),
@@ -299,4 +299,4 @@
 	"taxes" : NumberInt(0),
 	"title" : "Barber Shop",
 	"type" : NumberInt(8)
-},
+}]

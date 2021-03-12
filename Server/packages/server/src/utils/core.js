@@ -1,9 +1,10 @@
 module.exports = {
-  loadSystems: function() {
+  loadSystems: function(){
     var systems = require('require-all') ({
-      dirname : __dirname + '../../systems',
+      dirname : '/home/gta5-ragemp-server/Server/packages/server/src/systems',
       filter  : /^(index)\.js$/
     });
+	console.log("Core is up!!!");
   }
 }
 

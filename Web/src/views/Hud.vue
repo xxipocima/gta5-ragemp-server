@@ -24,7 +24,7 @@ export default {
   },
   mounted: function() {    
     gui.notify = this.$refs.notify;
-    // gui.modals = this.$refs.modals;
+    gui.modals = this.$refs.modals;
     gui.hud = this.$refs.hud;
     gui.chat = this.$refs.chat;
   }

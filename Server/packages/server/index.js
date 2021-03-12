@@ -13,5 +13,6 @@ db.on('error', function (error) {
 db.once('open', function () {
   console.log("[DEBUG] Server started at " + Date());
   loadSystems();
+  console.log("Servises is loaded");
 });
 

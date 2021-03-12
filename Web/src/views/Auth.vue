@@ -12,6 +12,8 @@
         <p class="lead small">You are not registered on this server. Insert your account's password to proceed with the reegistration.</p>
       </div>
       <div class="input-group">
+        <input class="form-control"
+          placeholder="Name">
         <input v-model="password" :type="showPassword == true ? 'text' : 'password'" class="form-control"
           placeholder="Password">
         <div @click="showPassword = !showPassword" class="input-group-prepend">
@@ -21,7 +23,7 @@
         </div>
       </div>
       <button v-if="pageMethod == 'login'" @click="sendAuth(true)" class="btn btn-primary mt-3">Login</button>
-      <button v-if="pageMethod == 'register'" @click="sendAuth(false)" class="btn btn-primary mt-3">Register</button>
+      <button v-ir="pageMethod == 'register'" @click="sendAuth(false)" class="btn btn-primary mt-3">Register</button>
     </div>
     <div class="copyright">Gamemode v0.0.1 - Last update: 09.03.2019</div>
   </div>
