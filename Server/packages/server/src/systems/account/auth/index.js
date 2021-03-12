@@ -1,12 +1,12 @@
 const accounts = require("../schema/accounts.js");
 var hash = require('simple-encryptor')('bZgl4bXFJ3HNQ4Rkozpzzhurdock');
 
-mp.events.add('receiveLoginData', (player, password, username) => {
+mp.events.add('receiveLoginData', (player, password) => {
   password = hash.hmac(password);
-  accounts.findOne({ username: username }, function(err, account) {
+  accounts.findOne({ username: player.name }, function(err, account) {
     if(err) return console.log(err);
     if(account == null) {
-      player.call('sendAuthResponse', [`Username ${username} is not registered.`, 'login']);
+      player.call('sendAuthResponse', [`Username ${player.name} is not registered.`, 'login']);
       return false;        
     }
     if(account.password != password) {
@@ -18,19 +18,19 @@ mp.events.add('receiveLoginData', (player, password, username) => {
   });
 });
 
-mp.events.add('receiveRegisterData', (player, password, username) => {
+mp.events.add('receiveRegisterData', (player, password) => {
   password = hash.hmac(password);
-  accounts.findOne({ username: username })
+  accounts.findOne({ username: player.name })
   .exec(function (err, user) {
     if(err) return console.log(err);
     if (user) { 
-      if (user.username == username) {
-        player.call('sendAuthResponse', [`${username} is already registered.`, 'register']);
+      if (user.username == player.name) {
+        player.call('sendAuthResponse', [`${player.name} is already registered.`, 'register']);
       }
     } 
     else { 
       const account = new accounts({ 
-        username: username,
+        username: player.name,
         password: password,
         registered: new Date(),
         lastConnected: new Date(),
