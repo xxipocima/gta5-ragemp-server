@@ -12,7 +12,7 @@
         <p class="lead small">You are not registered on this server. Insert your account's password to proceed with the reegistration.</p>
       </div>
       <div class="input-group">
-        <input class="form-control"
+        <input v-model="username" class="form-control"
           placeholder="Name">
         <input v-model="password" :type="showPassword == true ? 'text' : 'password'" class="form-control"
           placeholder="Password">
@@ -25,7 +25,7 @@
       <button v-if="pageMethod == 'login'" @click="sendAuth(true)" class="btn btn-primary mt-3">Login</button>
       <button v-ir="pageMethod == 'register'" @click="sendAuth(false)" class="btn btn-primary mt-3">Register</button>
     </div>
-    <div class="copyright">Gamemode v0.0.1 - Last update: 09.03.2019</div>
+    <div class="copyright">EVO gta5 RP server (Autored by Thijs and Frenk)</div>
   </div>
 </template>
 
@@ -35,6 +35,7 @@
     data: function () {
       return {
         submitExecuted: false,
+        username: "",
         password: "",
         showPassword: false
       };
@@ -48,6 +49,7 @@
           confirmButtonText: "Understood"
         });
         let password = this.password;
+        let username = this.username;
         if (password.length < 1) {
           return Swal({
             title: "Error!",
@@ -60,7 +62,7 @@
         setTimeout(() => {
           this.submitExecuted = false;
         }, 5000);
-        mp.trigger(type == true ? "sendLoginData" : "sendRegisterData", password);
+        mp.trigger(type == true ? "sendLoginData" : "sendRegisterData", password, username);
       }
     },
     watch: {
