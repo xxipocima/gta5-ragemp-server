@@ -1,7 +1,7 @@
 mp.events.add("playerTimer", (player) => {
   player.vars.randomMessage.timer --;
   if(player.vars.randomMessage.timer < 0) {
-    let messages = databox[1].data.messages;   
+    let messages = databox[3].data.messages;
     player.vars.randomMessage.timer = 300;
     player.vars.randomMessage.number ++;
     console.log(messages);
