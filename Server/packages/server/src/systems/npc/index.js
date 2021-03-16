@@ -1,9 +1,10 @@
 mp.events.addCommand({
   "spawnPed": (player, name) => {
     if(player.myPed)player.myPed.destroy();//если уже есть удаляем и пересоздаем
-    player.myPed = mp.peds.new(mp.game.joaat(name), new mp.Vector3(player.position.x+1, player.position.y, player.position.z), 127.3255, (streamPed) =>{
-      streamPed.setAlpha(0);
-    },0)
+    player.myPed = mp.peds.new(mp.joaat(name), new mp.Vector3(player.position.x+1, player.position.y, player.position.z), {
+      dynamic: true,
+      invincible: false,//true - npс бесмертный false - npс смертный
+    });
     player.myPed.controller = player;//указываем, кто будет выступать в роли контроллера.
     if(player.myVeh)player.myPed.data.veh = player.myVeh; //привязали к NPC машину чтобы в дальнейшем могли обратится именно к ней уже на клиенте
   },
