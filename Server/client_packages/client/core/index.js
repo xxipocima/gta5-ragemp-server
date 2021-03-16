@@ -9,3 +9,4 @@ require("./client/core/misc.js");
 require("./client/core/nametags.js"); 
 require("./client/core/hud.js");
 require("./client/core/subtitles.js");
+require("./client/core/island/heistisland.js");
