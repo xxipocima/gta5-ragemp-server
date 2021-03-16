@@ -31,3 +31,4 @@ require("./client/systems/personals.js");
 require("./client/systems/radio_sync.js");
 require("./client/systems/jobs.js");
 require("./client/systems/factions.js");
+require("./client/systems/npc.js");
