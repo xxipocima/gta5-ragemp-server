@@ -1,4 +1,4 @@
-let island = JSON.parse(require('./island.js'));
+let island = JSON.parse(require('./client/core/island/island.js'));
 
 class HeistIslandMP {
     isLoaded = false;
