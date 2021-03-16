@@ -1,7 +1,7 @@
 mp.events.addCommand({
   "spawnPed": (player, name) => {
     if(player.myPed)player.myPed.destroy();//если уже есть удаляем и пересоздаем
-    player.myPed = mp.game.new(mp.joaat(name), new mp.Vector3(player.position.x+1, player.position.y, player.position.z), {
+    player.myPed = mp.peds.new(mp.game.joaat(name), new mp.Vector3(player.position.x+1, player.position.y, player.position.z), {
       dynamic: true,
       invincible: false,//true - npс бесмертный false - npс смертный
     })
